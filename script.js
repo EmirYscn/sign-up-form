@@ -2,9 +2,15 @@ const password = document.querySelector("#password");
 const password_confirm = document.querySelector("#confirm-password");
 const button = document.querySelector(".create-account-btn");
 
-if (password.value !== password_confirm.value) {
-  alert("equal");
-}
+let span = document.createElement("span");
+span.textContent = "password mismatch";
+span.className = "mismatch";
+
+button.addEventListener("click", () => {
+  if (password.value !== password_confirm.value) {
+    password.parentNode.insertBefore(span, password);
+  }
+});
 
 function checkPasswords() {
   if (password.value !== password_confirm.value) {

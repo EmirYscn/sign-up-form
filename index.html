@@ -22,36 +22,42 @@
       </div>
       <div class="form-main">
         <h2 class="header-text">Let's do this</h2>
-        <form action="" method="get" class="form">
+        <form action="" method="get" class="form" id="form">
           <div class="row-1">
             <div class="form-element">
               <label for="first-name">FIRST NAME</label>
-              <input type="text" name="first_name" id="first-name" />
+              <input type="text" name="first_name" id="first-name" required />
             </div>
             <div class="form-element">
               <label for="last-name">LAST NAME</label>
-              <input type="text" name="last_name" id="last-name" />
+              <input type="text" name="last_name" id="last-name" required />
             </div>
           </div>
           <div class="row-2">
             <div class="form-element">
               <label for="email">EMAIL</label>
-              <input type="email" name="email" id="email" />
+              <input
+                type="email"
+                name="email"
+                id="email"
+                required
+                placeholder="john_doe@gmail.com"
+              />
             </div>
             <div class="form-element">
               <label for="phone-number">PHONE NUMBER</label>
-              <input type="tel" name="phone_number" id="phone-number" />
+              <input
+                type="tel"
+                name="phone_number"
+                id="phone-number"
+                placeholder="(123) 456-789"
+              />
             </div>
           </div>
           <div class="row-3">
             <div class="form-element">
               <label for="password">PASSWORD</label>
-              <input
-                type="password"
-                name="password"
-                id="password"
-                value="123"
-              />
+              <input type="password" name="password" id="password" required />
             </div>
             <div class="form-element">
               <label for="confirm-password">CONFIRM PASSWORD</label>
@@ -59,7 +65,7 @@
                 type="password"
                 name="confirm_password"
                 id="confirm-password"
-                value="123"
+                required
               />
             </div>
           </div>
@@ -67,7 +73,7 @@
       </div>
       <div class="bottom-container">
         <div class="button-container">
-          <button type="submit" class="create-account-btn">
+          <button type="submit" form="form" class="create-account-btn">
             Create Account
           </button>
         </div>

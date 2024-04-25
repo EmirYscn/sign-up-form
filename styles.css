@@ -1,3 +1,5 @@
+@import url(https://fonts.bunny.net/css?family=abril-fatface:400|alata:400);
+
 @font-face {
   font-family: "custom-font";
   src: url(fonts/Norse-Bold.otf) format("woff2");
@@ -8,17 +10,18 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  --bg-color: rgb(236, 236, 236);
+  --main-color: #827044;
 }
 body {
   height: 100vh;
   display: flex;
   flex-direction: row;
+  font-family: "Abril Fatface", display;
 }
 .image-section {
   height: 100%;
   width: 60%;
-  background-image: url(images/halie-west-25xggax4bSA-unsplash.jpg);
+  background-image: url(images/anwar-hakim-MORu2SfcINk-unsplash.jpg);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -40,10 +43,12 @@ body {
   width: 65%;
   padding: 16px;
   margin: 0 32px;
+  color: var(--main-color);
 }
 .form-main {
   background-color: #fff;
   box-shadow: 0px 5px 10px #d8d8d8;
+  font-family: "Alata", sans-serif;
 }
 .form {
   padding: 32px 16px;
@@ -85,12 +90,18 @@ button {
   padding: 12px 48px;
   border-radius: 8px;
   border-color: transparent;
-  background-color: #596d48;
+  background-color: var(--main-color);
   color: white;
   font-size: 16px;
   font-weight: bold;
-  box-shadow: 4px 4px 10px #d8d8d8;
+  box-shadow: 4px 4px 10px #bd8d3f;
   cursor: pointer;
+}
+button:hover {
+  background-color: #8ba970;
+}
+button:active {
+  transform: translateX(2px) translateY(2px);
 }
 p {
   padding: 16px;
@@ -98,7 +109,7 @@ p {
 }
 a {
   text-decoration: none;
-  color: #596d48;
+  color: var(--main-color);
   font-weight: bold;
 }
 input:focus {
@@ -107,4 +118,31 @@ input:focus {
 }
 input[type="password"]:invalid {
   border-color: red;
+}
+/* label[for="password"]::after {
+  content: "*password mismatch";
+  color: white;
+  display: inline-block;
+  padding: 0 10px;
+  text-align: center;
+  background-color: rgba(255, 0, 0, 0.636);
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: smaller;
+  visibility: hidden;
+} */
+.mismatch {
+  color: white;
+  display: inline-block;
+  padding: 0 10px;
+  text-align: center;
+  background-color: rgba(255, 0, 0, 0.636);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.form-element {
+  position: relative;
 }
